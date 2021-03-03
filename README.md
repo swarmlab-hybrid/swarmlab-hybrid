@@ -148,7 +148,7 @@ Local usage of the service <b>doesnt</b> require one, you only need to log in to
 
 ## Installation<a name="installation"></a>
   
-  ### *nix
+### for *nix
   
 <br />
 <p align="center">
@@ -170,7 +170,7 @@ Local usage of the service <b>doesnt</b> require one, you only need to log in to
   </p>
 </p>
 
-### windows
+### for windows
 You can find ready to run VM images <a href="https://uniwagr-my.sharepoint.com/:u:/g/personal/ice19390012_uniwa_gr/EbhjQIeiDeNFkfkSBWczRggBcJq2Pv6lAJs-NKkT4hXg-g?e=0VC0xa">here</a>.
 
 ### More Info<a name="moreinfo"></a>
