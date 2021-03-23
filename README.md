@@ -1,7 +1,13 @@
+
 <img align="right" width="300" height="300" src="https://git.swarmlab.io:3000/zeus/swarmlab-hybrid/raw/branch/master/docs/images/hybrid-1.png">
 
 # Swarmlab Hybrid
   
+ 
+## This is not the main repository and may be out of date!!!!
+
+Please refer <a href="https://git.swarmlab.io:3000/zeus/swarmlab-hybrid">here</a> for our official git.
+ 
 
 #### **Welcome to Swarmlab.io**
 
@@ -62,11 +68,6 @@ To make the service easier to use we have created an ever-growing database of re
 - Optimized for both Students and Tutors
 - Tutors bootstrap their labrooms using our tools
 
-- Students can:  
- - join the created labrooms according to their interrests
- - run the evailable labs at will
- - create their own rooms for exercising  
-
 
 ### Hybrid
 - Create Labrooms/Applications
@@ -77,6 +78,11 @@ To make the service easier to use we have created an ever-growing database of re
 - Create your own labs 
 - open source barebone -> <b>Share them with your friends</b>
 
+
+### In any case students can:  
+- join the created labrooms according to their interrests
+- run the evailable labs at will
+- create their own rooms for exercising  
 
 ## IMPORTANT
 :exclamation: If you wish to use the service in Hybrid mode, that is if you want to share, download or perform other activites on the cloud you will need a <b>KEY</b>. Read installation instructions to learn how to do that.  
@@ -109,7 +115,7 @@ Local usage of the service <b>doesnt</b> require one, you only need to log in to
 :warning: Since Docker uses hypervisor the host NEEDS TO HAVE VIRTUALIZATION ENABLED!
 
 
-
+ 
 
 ## Prerequisites<a name="prerequisites"></a>
 
@@ -126,8 +132,14 @@ Local usage of the service <b>doesnt</b> require one, you only need to log in to
   sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
   sudo apt update
   sudo apt install -y docker-ce
-  sudo usermod -aG docker [USERNAME]
+  sudo usermod -aG docker [USERNAME] # Please replace [USERNAME] with the user you want to run docker on
   ```
+
+:information_source: for kali specifically please visit the following link to install docker. 
+
+https://linuxhint.com/install_docker_kali_linux/
+
+
 * docker-compose
 
   ```sh
@@ -150,28 +162,55 @@ Local usage of the service <b>doesnt</b> require one, you only need to log in to
   
 ### for *nix
   
-<br />
-<p align="center">
-  <p align="center">
+
 - Clone the repo
 
    ```sh
    git clone --recurse-submodules https://git.swarmlab.io:3000/zeus/swarmlab-hybrid.git
    ```
+
 - Install it!
 
    ```sh
    cd swarmlab-hybrid
-   ./install.sh
+   ./install.sh  <-- run it without root privileges
    ```
+
 - Open URL __http://localhost:3088__ in browser 
  - Get a Swarmlab account. 
 - Get a free API Key at  **Settings->Enable the Swarmlab hybrid** Menu
-  </p>
-</p>
 
-### for windows
-You can find ready to run VM images <a href="https://uniwagr-my.sharepoint.com/:u:/g/personal/ice19390012_uniwa_gr/EbhjQIeiDeNFkfkSBWczRggBcJq2Pv6lAJs-NKkT4hXg-g?e=0VC0xa">here</a>.
+
+### for windows or if you wish to keep the environment contained
+
+You can find ready to run VM images <a href="https://uniwagr-my.sharepoint.com/:u:/g/personal/ice19390012_uniwa_gr/EbhjQIeiDeNFkfkSBWczRggBcJq2Pv6lAJs-NKkT4hXg-g?e=0VC0xa" target="_blank">here</a>.
+
+And instructions on how to use them <a href="https://git.swarmlab.io:3000/zeus/swarmlab-hybrid/src/branch/master/docs/windows_use_vm.md">here</a>.
+
+:information_source: Default password: swarmlab
+
+PLEASE CHANGE PASSWORD IMEDIATELLY AFTER FIRST LAUNCH!!!
+
+## First Run
+
+:exclamation: No matter your distribution, upon installing you will HAVE to load settings before the first run!!
+
+This will <b>initialize the configuration</b> using the <b>system defaults</b>.  
+
+Afterwards you can <b>add custom settings</b>, or keep using the defaults.  
+This action does <b>NOT</b> need to be repeated unless you wish to <b>reset the application</b>.  
+
+>
+> Please navigate to the "Profile->Settings" menu and click on the "Load settings" button.
+>
+
+After doing this the application <b>MUST</b> be reastarted! To do that please run the restart script.
+ 
+inside the root directory of the project run
+
+  ```sh
+  ./restart.sh
+  ```
 
 ### More Info<a name="moreinfo"></a>
 
@@ -183,4 +222,6 @@ The Swarmlab docs are in **AsciiDoc** (similar to markdown), **PDF** and **html*
 For real-time rendering in browser Asciidoc an add-on can be found here:
 
 http://docs.swarmlab.io/SwarmLab-HowTos/labs/Howtos/doclive/asciidoc.adoc.html#_setup_live_preview_using_a_web_browser
+
+
 
